@@ -1,0 +1,5 @@
+= simple_form_for @identifier, url: identify_path do |f|
+  
+  = f.input :notes, as: :select, collection: Identifier.notes, input_html: {multiple: true}
+  = f.submit
+
