@@ -1,5 +1,16 @@
+h1 Welcome to the Chord Identifier
+p Do you want to know what the name of a certain chord is? Can you figure out the names of the notes in the chord? Good! The Chord Identifier can calculate the name of the chord for you. There are three simple steps:
+	<ol>
+		<li>Select the notes in the chord (minimum 2, maximum 5).</li>
+		<li>Select the base note (or 'root note').</li>
+		<li>Click 'Identify Chord'!</li>
+	</ol>	
+
+p Go ahead, try it out! Start by selecting some notes below:
+
 = simple_form_for @identifier, url: identify_path do |f|
   
-  = f.input :notes, as: :select, collection: Identifier.notes, input_html: {multiple: true}
-  = f.submit
+  = f.input :chord_scale, label: "Notes", as: :check_boxes, collection: Identifier.chromatic_scale, :item_wrapper_class => 'checkbox_container', input_html: {multiple: true}
+  = f.input :base_note, label: "Base Note", as: :select, collection: Identifier.chromatic_scale, input_html: {multiple: false}
+  = f.submit 'Identify Chord', :class => 'btn-primary'
 

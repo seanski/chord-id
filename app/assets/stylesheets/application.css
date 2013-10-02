@@ -11,3 +11,25 @@
  *= require_self
  *= require_tree .
  */
+
+
+.identifier_chord_scale .checkbox_container {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+ }
+.identifier_chord_scale .checkbox_container input {
+  display: inline;
+ }
+.identifier_chord_scale .checkbox_container .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+ }
+
+#new_identifier .btn-primary{
+	margin: 25px 0px;
+}
+
+#identifier_base_note {
+	margin-left: 5px;
+}

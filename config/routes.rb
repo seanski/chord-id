@@ -1,5 +1,5 @@
 ChordId::Application.routes.draw do
-  root 'home#index'
+  root 'identifier#index'
   get 'identifier/index', as: :identifier
   get 'identifier/show', as: :show_identifier
   post 'identifier/identify', as: :identify

@@ -8,9 +8,9 @@ class Identifier
     false
   end  
 
-  def identify(chord_tones)
-    chord_tones.delete_if { |n| n.blank? } # if n == base_note
-    self.base_note   = chord_tones.shift # not permanetnly removed, only if .shift!
+  def identify(chord_tones, base_note)
+    chord_tones.delete_if { |n| n.blank? || n == base_note } # if n == base_note
+    self.base_note   = base_note
     base_note_index  = Identifier.chromatic_scale.index(self.base_note)
     self.chord_scale = Identifier.chromatic_scale.rotate(base_note_index)
 

@@ -43,7 +43,7 @@ html lang="en"
           span.icon-bar
           span.icon-bar
         
-        a.navbar-brand href="#" ChordId
+        a.navbar-brand href="/" Chord Identifier
         div.nav-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
             li= link_to "Identifier", identifier_path
@@ -52,17 +52,9 @@ html lang="en"
 
     .container
       .row
-        .col-lg-9
+        .col-lg-12
           = bootstrap_flash
-          = yield        
-        .col-lg-3
-          .well.sidebar-nav
-            h3 Sidebar
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link1", "/path1"
-              li= link_to "Link2", "/path2"
-              li= link_to "Link3", "/path3"
+          = yield      
 
       footer
-        | &copy; Company 2013
+        | &copy; 2013 Chords For Days
