@@ -1,0 +1,9 @@
+<% if @chord %>
+	<h1>That's a <%= @chord %> chord!</h1>
+	<p>Or did you guess that already?</p>
+<% else %>
+	<h1>I'm sorry, but I don't understand that chord!</h1>
+	<p> Make sure you entered the notes correctly. It might a complex <%= link_to 'Atonal chord', 'https://en.wikipedia.org/wiki/Atonal', :target => '_blank' %> or uncommon <%= link_to 'Jazz chord', 'https://en.wikipedia.org/wiki/Jazz_chord', :target => '_blank' %>.</p>
+<% end %>
+
+<%= link_to 'Take Me Back', '/', class: 'btn-primary' %> 
